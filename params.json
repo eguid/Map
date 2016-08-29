@@ -1,0 +1,6 @@
+{
+  "name": "eguid-Map",
+  "tagline": "基于百度地图二次开发实现的车辆位置方向定位，方便控制车辆的图片、位置、方向、标注、弹出框等操作",
+  "body": "# Map\r\n基于百度地图二次开发实现的车辆位置方向定位，方便控制车辆的图片、位置、方向、标注、弹出框等操作\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
