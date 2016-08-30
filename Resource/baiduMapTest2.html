@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>基于百度地图二次开发车辆定位及电子围栏测试</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        #allmap {
+            width: 800px;
+            height: 500px;
+            overflow: hidden;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+    </style>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=L0Bn8ES10N5Qj7z9fEb2wQmvPUbBX3AS"></script>
+</head>
+
+<body>
+
+    <div id="allmap" style="overflow:hidden;zoom:1;position:relative;">
+
+        <div>
+            <button class="BMapLib_box " onclick="closeDraw()">拖动地图</button>
+            <button class="BMapLib_box " onclick="openDraw(1)">画点</button>
+            <button class="BMapLib_box " onclick="openDraw(4)">画圆</button>
+            <button class="BMapLib_box " onclick="openDraw(2)">画折线</button>
+            <button class="BMapLib_box " onclick="openDraw(5)">画多边形</button>
+            <button class="BMapLib_box " onclick="openDraw(3)">画矩形</button>
+            <button type="button" onclick="clearAll()">清除所有绘制的覆盖物</button>
+            <button type="button" onclick="openDis()">开启鼠标测距</button>
+            <button type="button" onclick="openRectangleZoom()">开启拉框放大</button>
+            <button type="button" onclick="closeRectangleZoom()">关闭拉框</button>
+            <br/>
+
+            <span>在点击测试演示之前请先绘制圆形、矩形或多边形覆盖物</span>
+            <button type="button" onclick="testRun()">车辆越出电子围栏触发事件演示测试</button>
+            <button type="button" onclick="showCar()">显示小车</button>
+            <button type="button" onclick="hideCar()">隐藏小车</button>
+            <br/>
+
+            <span>城市名：</span>
+            <input id="cityName" type="text" name="cityName" value="">
+            <button type="button" onclick="theCityLocation()">切换城市</button>
+            <span>搜索地物：</span>
+            <input id="searchName" type="text" value="">
+            <button type="button" onclick="search(1)">搜索</button>
+            <button type="button" onclick="cityLocation('南京')">地图复位</button>
+        </div>
+        <div id="map" style="height:100%;-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;">
+        </div>
+    </div>
+    <div>
+        当前绘制完成的覆盖物列表：
+        <ul id="drawlist">
+        </ul>
+    </div>
+    <div id="r-result"></div>
+
+</body>
+
+<!--图形计算工具-->
+<script type="text/javascript" src="baiduMapAPI/GeoUtils_min.js"></script>
+
+<!--加载鼠标绘制工具-->
+<script type="text/javascript" src="baiduMapAPI/DrawingManager_min.js"></script>
+<link rel="stylesheet" href="baiduMapAPI/DrawingManager_min.css" />
+
+<!--加载路况信息-->
+<link href="baiduMapAPI/TrafficControl_min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="baiduMapAPI/TrafficControl_min.js"></script>
+
+<!--加载鼠标测距-->
+<script type="text/javascript" src="baiduMapAPI/DistanceTool_min.js"></script>
+
+<!--加载鼠标拖拽-->
+<script type="text/javascript" src="baiduMapAPI/RectangleZoom_min.js"></script>
+<!--初始化地图-->
+<script type="text/javascript" src="js/initMap.js"></script>
+<!--车辆操作实例-->
+<script type="text/javascript" src="js/carAction.js"></script>
+<!--鼠标绘制操作实例-->
+<script type="text/javascript" src="js/drawAction.js"></script>
+<!--用于电子围栏越界判断实例-->
+<script type="text/javascript" src="js/geoAction.js"></script>
+<!--demo演示-->
+<script type="text/javascript" src="js/demoAction.js"></script>
+
+</html>
