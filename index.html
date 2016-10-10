@@ -7,8 +7,27 @@
     <meta name="description" content="eguid-Map : 基于百度地图二次开发实现的车辆监管前端实现">
     <meta name="360-site-verification" content="794fea650c829b2b3d5c6e3a4e876007" />
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
     <title>eguid-Map</title>
+     <script>
+       <!--360蜘蛛-->
+       function(){
+   var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?f55b2d5a920277b3a2fe56aaede03e6a":"https://jspassport.ssl.qhimg.com/11.0.1.js?f55b2d5a920277b3a2fe56aaede03e6a";
+   document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+       <!--baidu蜘蛛-->
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
   </head>
 
   <body>
@@ -107,18 +126,5 @@
     
 
   </body>
-  <script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+ 
 </html>
